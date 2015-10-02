@@ -23,10 +23,10 @@ describe Board do
       player_piece = "X"
       board = Board.new
       board.arr = [["X","X",nil],["X",nil,nil],[nil,nil,nil]]
-      board.add 0,"X"
+      board.add 1,"X"
       expect(board.arr).to \
         eq([["X","X","X"],["X",nil,nil],[nil,nil,nil]])
-      board.add 2,"X"
+      board.add 3,"X"
       expect(board.arr).to \
         eq([["X","X","X"],["X",nil,nil],["X",nil,nil]])
     end
@@ -37,7 +37,11 @@ describe Board do
     it "outputs the array to_stdout" do
       board = Board.new ( [ [nil,nil,nil],["X","X",nil],["O","X",nil] ] )
       expect {board.display}.to \
-        output("| || || |\n| ||X||X|\n| ||X||O|\n").to_stdout
+        output(" CONNECT FOUR \n| || || |\n| ||X||X|\n| ||X||O|\n 1  2  3 ").to_stdout
     end
+  end
+
+
+  describe ".winner?" do
   end
 end
