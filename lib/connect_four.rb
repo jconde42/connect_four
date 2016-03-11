@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require_relative "board"
 require_relative "player"
 
@@ -52,7 +53,7 @@ def start
   start_menu
   print "> "
   choice = gets.chomp
-  puts 
+  puts
 
   case choice
   when "1" # Play
